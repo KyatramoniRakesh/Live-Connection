@@ -1,0 +1,55 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ROOT VARIABLES – LiveConnections Style */
+:root {
+  --primary-blue: #0b5ed7;
+  --dark-blue: #0a2540;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --bg-white: #ffffff;
+  --bg-light: #f9fafb;
+
+  --font-main: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* GLOBAL */
+body {
+  font-family: var(--font-main);
+  color: var(--text-dark);
+  background-color: var(--bg-white);
+  line-height: 1.6;
+}
+
+/* CONTAINER (used everywhere like liveconnections.in) */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 16px;
+}
+
+/* COMMON HEADINGS */
+h1, h2, h3, h4 {
+  color: var(--dark-blue);
+  font-weight: 600;
+}
+
+/* BUTTON BASE */
+.btn {
+  padding: 10px 20px;
+  background-color: var(--primary-blue);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #084298;
+}
