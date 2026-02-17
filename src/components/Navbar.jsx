@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { NavLink, Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import "../CSS/Navbar.css";
 import Logo from "../images/Logo.svg";
@@ -6,10 +7,11 @@ import Logo from "../images/Logo.svg";
 const Navbar = () => {
     const [open, setOpen] = useState(false);
 
-    // Prevent background scroll when sidebar is open
     useEffect(() => {
         document.body.style.overflow = open ? "hidden" : "auto";
     }, [open]);
+
+    const closeMenu = () => setOpen(false);
 
     return (
         <>
@@ -17,17 +19,18 @@ const Navbar = () => {
                 <div className="navbar-container">
                     <div className="navbar-left">
                         <div className="navbar-logo">
-                            <a href="/">
+                            <Link to="/">
                                 <img src={Logo} alt="Live Connections Logo" />
-                            </a>
+                            </Link>
                         </div>
 
                         <nav className="navbar-links">
-                            <a href="#">Company</a>
-                            <a href="#">Services</a>
-                            <a href="#">Diversity & Inclusion</a>
-                            <a href="#">Domain Specialities</a>
-                            <a href="#">Contact</a>
+                            
+                            <NavLink to="/company">Company</NavLink>
+                            <NavLink to="/services">Services</NavLink>
+                            <NavLink to="/diversity">Diversity & Inclusion</NavLink>
+                            <NavLink to="/domains">Domain Specialities</NavLink>
+                            <NavLink to="/contact">Contact</NavLink>
                         </nav>
                     </div>
 
@@ -48,22 +51,21 @@ const Navbar = () => {
             {open && (
                 <div
                     className="menu-overlay"
-                    onClick={() => setOpen(false)}
+                    onClick={closeMenu}
                 />
             )}
 
             <div className={`mobile-menu ${open ? "open" : ""}`}>
-                {/* Close X inside sidebar */}
                 <div className="mobile-close">
-                    <FiX size={24} onClick={() => setOpen(false)} />
+                    <FiX size={24} onClick={closeMenu} />
                 </div>
 
-                <a href="#" className="active">Home</a>
-                <a href="#">Company</a>
-                <a href="#">Services</a>
-                <a href="#">Diversity & Inclusion</a>
-                <a href="#">Domain Specialities</a>
-                <a href="#">Contact</a>
+                <NavLink to="/" end onClick={closeMenu}>Home</NavLink>
+                <NavLink to="/company" onClick={closeMenu}>Company</NavLink>
+                <NavLink to="/services" onClick={closeMenu}>Services</NavLink>
+                <NavLink to="/diversity" onClick={closeMenu}>Diversity & Inclusion</NavLink>
+                <NavLink to="/domains" onClick={closeMenu}>Domain Specialities</NavLink>
+                <NavLink to="/contact" onClick={closeMenu}>Contact</NavLink>
 
                 <button className="mobile-btn">Find a Job</button>
             </div>

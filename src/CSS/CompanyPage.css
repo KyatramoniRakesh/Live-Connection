@@ -1,0 +1,321 @@
+/* =====================================
+   COMPANY HERO SECTION
+===================================== */
+
+.live-company-hero {
+    width: 100%;
+    height: 100vh;
+    /* min-height: 720px; */
+    background-size: cover;
+    background-position: left center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Overlay container */
+.live-company-overlay {
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+    position: relative;
+}
+
+/* Text Content */
+.live-company-content {
+    max-width: 650px;
+    color: #ffffff;
+}
+
+.live-company-title {
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.live-company-description {
+    font-size: 20px;
+    line-height: 1.6;
+    opacity: 0.9;
+    max-width: 480px;
+}
+
+/* =====================================
+   FLOATING LABELS (SCROLL BASED)
+===================================== */
+
+.live-company-label {
+    position: absolute;
+    background: #ffffff;
+    color: #333;
+    padding: 10px 36px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.1s linear, opacity 0.1s linear;
+    will-change: transform;
+}
+
+/* Label Positions (Desktop Accurate) */
+.live-label-1 {
+    top: 38%;
+    left: 48%;
+}
+
+.live-label-2 {
+    top: 65%;
+    left: 55%;
+}
+
+.live-label-3 {
+    top: 25%;
+    right: 6%;
+}
+
+/* =====================================
+   RESPONSIVE BREAKPOINTS
+===================================== */
+
+/* Large Tablets */
+@media (max-width: 1200px) {
+
+    .live-company-title {
+        font-size: 54px;
+    }
+
+    .live-company-description {
+        font-size: 18px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+
+    .live-company-title {
+        font-size: 46px;
+    }
+
+    .live-company-description {
+        font-size: 17px;
+    }
+
+    .live-label-1 { left: 50%; }
+    .live-label-2 { left: 50%; }
+}
+/* ================= MOBILE FIX (FINAL) ================= */
+
+@media (max-width: 768px) {
+
+    .live-company-hero {
+        height: 30vh;
+      
+
+        /* THIS IS THE FIX */
+        background-size: cover;
+        background-position: 60% center;
+        background-repeat: no-repeat;
+
+        display: flex;
+        align-items: center;
+    }
+
+    .live-company-overlay {
+        width: 90%;
+    }
+
+    .live-company-content {
+        max-width: 80%;
+        margin-top: 0;
+    }
+
+    .live-company-title {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+     .live-company-description {
+        display: none;
+    }
+
+    .live-company-label {
+        display: none;
+    }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 480px) {
+
+    .live-company-hero {
+        background-position: 50% center;
+    }
+
+    .live-company-title {
+        font-size: 24px;
+        max-width: 12rem;
+    }
+
+    .live-company-description {
+        display: none;
+    }
+}
+
+
+/* =====================================
+   VALUE SECTION
+===================================== */
+
+.live-company-value {
+    /* width: 100%; */
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.live-company-value-container {
+    /* width: 90%; */
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* LEFT */
+
+.live-company-value-left {
+    flex: 1;
+}
+
+.live-company-value-title {
+    font-size: 72px;
+    font-weight: 600;
+    line-height: 1.1;
+    color: #0f2b3a;
+}
+
+.live-company-value-underline {
+    width: 120px;
+    height: 6px;
+    margin-top: 25px;
+    background: linear-gradient(to right, #7b5bd6, #9c8cf4);
+}
+
+/* RIGHT */
+
+.live-company-value-right {
+    flex: 1.2;
+}
+
+.live-company-value-right p {
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.live-company-value-highlight {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #8a6ee6;
+    margin-bottom: 40px;
+}
+
+.live-company-value-btn {
+    margin-top: 20px;
+    padding: 14px 40px;
+    border: 2px solid #8a6ee6;
+    background: transparent;
+    color: #8a6ee6;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.live-company-value-btn:hover {
+    background: #8a6ee6;
+    color: #ffffff;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 1200px) {
+
+    .live-company-value-title {
+        font-size: 56px;
+    }
+
+    .live-company-value-highlight {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .live-company-value-container {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .live-company-value-title {
+        font-size: 48px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .live-company-value {
+        padding: 70px 0;
+        margin: 10px;
+    }
+
+    .live-company-value-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .live-company-value-title {
+        font-size: 34px;
+    }
+
+    .live-company-value-underline {
+        width: 90px;
+        height: 5px;
+    }
+
+    .live-company-value-highlight {
+        font-size: 22px;
+    }
+
+    .live-company-value-right p {
+        font-size: 15px;
+    }
+
+    .live-company-value-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .live-company-value-title {
+        font-size: 26px;
+    }
+
+    .live-company-value-highlight {
+        font-size: 18px;
+    }
+
+    .live-company-value-right p {
+        font-size: 14px;
+    }
+}
