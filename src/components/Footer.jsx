@@ -72,8 +72,9 @@ const Footer = () => {
                         <a href="#">Contact</a>
                     </div>
 
-                    {/* RIGHT AREA */}
+                    {/* RIGHT SIDE */}
                     <div className="live-footer-right-area">
+
                         <div className="live-footer-social">
                             <FaFacebookF />
                             <FaInstagram />
@@ -85,9 +86,11 @@ const Footer = () => {
                         <p className="live-footer-copy">
                             ©2007-2023 Live Connections Placements Pvt Ltd, All rights reserved Privacy Policy
                         </p>
+
                     </div>
 
                 </div>
+
 
             </div>
         </footer>
