@@ -2,6 +2,7 @@ import { useState } from "react";
 import "../CSS/JobSearch.css";
 import womanImg from "../images/livec_2.webp";
 import { FiUser, FiMessageCircle, FiTarget } from "react-icons/fi";
+import Footprint from "../components/Footprint";
 
 const JobSearch = () => {
     const [formData, setFormData] = useState({
@@ -139,6 +140,9 @@ const JobSearch = () => {
 
                 </div>
             </section>
+
+            <Footprint />
+
             <section className="live-services">
                 <div className="live-services-container">
 
@@ -162,6 +166,15 @@ const JobSearch = () => {
                                 Pacific rim.
                             </p>
                         </div>
+
+
+
+
+
+
+
+
+
 
                         {/* SERVICE CARDS */}
                         <div className="live-services-cards">

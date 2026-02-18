@@ -1,0 +1,340 @@
+.teamlive-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+    overflow: hidden;
+}
+
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right,
+            rgba(10, 15, 35, 0.9),
+            rgba(10, 15, 35, 0.6),
+            rgba(10, 15, 35, 0.1));
+}
+
+/* Content block */
+.teamlive-content {
+    position: relative;
+    max-width: 480px;
+    color: white;
+    /* padding-left: 70px; */
+    animation: slideUp 1.2s ease-out forwards;
+    transform: translateY(80px);
+    opacity: 0;
+    margin: 0;
+}
+
+/* Title */
+.team-title {
+    font-size: 56px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 10px;
+}
+
+/* Small purple underline */
+.underline {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #6f5cff, #b58cff);
+    margin-bottom: 30px;
+    border-radius: 2px;
+}
+
+
+.team-description {
+    
+    margin-bottom: 35px;
+    color: #FFFFFF;
+    font-family: "ClashDisplay", Sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 34px;
+}
+
+/* Button */
+.cta-btn {
+    background: linear-gradient(135deg, #7a5cff, #9f7bff);
+    color: white;
+    border: none;
+    padding: 14px 34px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.2s ease;
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(122, 92, 255, 0.4);
+    background: linear-gradient(135deg, #b4acda, #696081);
+}
+
+/* Animation keyframes */
+@keyframes slideUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.opportunities-section {
+  padding: 10px 20px;
+  background: #f5f5f5;
+  color: #222;
+}
+
+/* Animate whole block */
+.opp-content {
+  max-width: 900px;
+  font-family: "ClashDisplay", sans-serif;
+  animation: slideUp 1.2s ease-out forwards;
+  transform: translateY(80px);
+  opacity: 0;
+}
+
+/* Title */
+.opp-title {
+  font-size: 56px;
+  font-weight: 600;
+  font-family: "ClashDisplay", Sans-serif;
+  margin-bottom: 12px;
+}
+
+/* Underline */
+.opp-underline {
+  width: 90px;
+  height: 5px;
+  background: linear-gradient(90deg, #6f5cff, #8ea2ff);
+  border-radius: 2px;
+  margin-bottom: 40px;
+}
+
+/* Paragraph */
+.opp-text {
+    max-width: 800px;
+    font-size: 22px;
+    text-align: justify;
+    line-height: 1.8;
+    color: #8a6fe8;
+    font-family: "ClashDisplay", sans-serif;
+    margin-bottom: 65px;
+}
+
+/* Sub heading */
+.recent-title {
+  font-size: 30px;
+  font-weight: 500;
+  font-family: "ClashDisplay", Sans-serif;
+}
+
+/* SAME animation as previous */
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/* ============================= */
+/* LARGE SCREENS (Below 1440px) */
+/* ============================= */
+
+@media (max-width: 1440px) {
+
+  .team-title {
+    font-size: 48px;
+  }
+
+  .team-description {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .opp-title {
+    font-size: 48px;
+  }
+
+  .opp-text {
+    font-size: 20px;
+  }
+}
+
+
+/* ============================= */
+/* TABLET LANDSCAPE (1024px) */
+/* ============================= */
+
+@media (max-width: 1024px) {
+
+  .teamlive-container {
+    padding-left: 60px;
+  }
+
+  .team-title {
+    font-size: 42px;
+  }
+
+  .team-description {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .opp-title {
+    font-size: 42px;
+  }
+
+  .opp-text {
+    font-size: 19px;
+    line-height: 1.7;
+  }
+
+  .recent-title {
+    font-size: 26px;
+  }
+}
+
+
+/* ============================= */
+/* TABLET PORTRAIT (768px) */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  .teamlive-container {
+    padding-left: 40px;
+    height: 85vh;
+  }
+
+  .teamlive-content {
+    max-width: 100%;
+  }
+
+  .team-title {
+    font-size: 34px;
+  }
+
+  .team-description {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .underline {
+    width: 60px;
+  }
+
+  .cta-btn {
+    padding: 12px 28px;
+    font-size: 15px;
+  }
+
+  .opportunities-section {
+    padding: 60px 40px;
+  }
+
+  .opp-title {
+    font-size: 34px;
+  }
+
+  .opp-text {
+    font-size: 17px;
+    margin-bottom: 40px;
+  }
+
+  .recent-title {
+    font-size: 22px;
+  }
+}
+
+
+/* ============================= */
+/* MOBILE (480px) */
+/* ============================= */
+
+@media (max-width: 480px) {
+
+  .teamlive-container {
+    padding: 0 25px;
+    height: auto;
+    min-height: 75vh;
+    align-items: center;
+  }
+
+  .team-title {
+    font-size: 28px;
+  }
+
+  .team-description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .underline {
+    width: 50px;
+    height: 3px;
+  }
+
+  .cta-btn {
+    padding: 10px 22px;
+    font-size: 14px;
+  }
+
+  .opportunities-section {
+    padding: 50px 25px;
+  }
+
+  .opp-title {
+    font-size: 28px;
+  }
+
+  .opp-underline {
+    width: 60px;
+    height: 4px;
+  }
+
+  .opp-text {
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: left; /* better for mobile */
+  }
+
+  .recent-title {
+    font-size: 18px;
+  }
+}
+
+
+/* ============================= */
+/* SMALL MOBILE (360px) */
+/* ============================= */
+
+@media (max-width: 360px) {
+
+  .team-title {
+    font-size: 24px;
+  }
+
+  .team-description {
+    font-size: 14px;
+  }
+
+  .opp-title {
+    font-size: 24px;
+  }
+
+  .opp-text {
+    font-size: 14px;
+  }
+
+}
