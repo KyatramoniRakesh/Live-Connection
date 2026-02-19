@@ -1,80 +1,103 @@
 import { useState, useEffect } from "react";
-import { NavLink, Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
+import { Link } from "react-router-dom";
 import "../CSS/Navbar.css";
 import Logo from "../images/Logo.svg";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
+    const [device, setDevice] = useState("desktop");
 
     useEffect(() => {
-        document.body.style.overflow = open ? "hidden" : "auto";
-    }, [open]);
+        const handleResize = () => {
+            if (window.innerWidth <= 768) {
+                setDevice("mobile");
+            } else if (window.innerWidth <= 1024) {
+                setDevice("tablet");
+            } else {
+                setDevice("desktop");
+                setOpen(false);
+            }
+        };
 
-    const closeMenu = () => setOpen(false);
+        handleResize();
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    const handleClose = () => {
+        setOpen(false);
+    };
 
     return (
         <>
-            <header className="navbar">
-                <div className="navbar-container">
-                    <div className="navbar-left">
-                        <div className="navbar-logo">
-                            <Link to="/">
-                                <img src={Logo} alt="Live Connections Logo" />
+            <header className="live-navbar">
+                <div className="live-navbar-left">
+                    <Link to="/">
+                        <img src={Logo} alt="Live Connections" className="live-logo" />
+                    </Link>
+                </div>
+
+                {device === "desktop" && (
+                    <>
+                        <nav className="live-navbar-center">
+                            <Link to="/company">Company</Link>
+                            <Link to="#">Services</Link>
+                            <Link to="/diversity">Diversity & Inclusion</Link>
+                            <Link to="/domains">Domain Specialities</Link>
+                            <Link to="/contact">Contact</Link>
+                        </nav>
+
+                        <div className="live-navbar-right">
+                            <button className="live-talk-btn">Talk to Us</button>
+                            <Link to="/jobs">
+                                <button className="live-find-btn">Find a Job</button>
                             </Link>
                         </div>
+                    </>
+                )}
 
-                        <nav className="navbar-links">
-
-                            <NavLink to="/company">Company</NavLink>
-                            <NavLink to="/services">Services</NavLink>
-                            <NavLink to="/diversity">Diversity & Inclusion</NavLink>
-                            <NavLink to="/domains">Domain Specialities</NavLink>
-                            <NavLink to="/contact">Contact</NavLink>
-                        </nav>
-                    </div>
-
-                    <div className="navbar-actions">
-                        <Link to="/contact" className="btn-outline">
-                            Talk to Us
-                        </Link>
-
-                        <Link to="/jobs" className="btn-filled">
-                            Find a Job
-                        </Link>
-                    </div>
-
-
+                {device !== "desktop" && (
                     <div
-                        className="mobile-menu-icon"
+                        className="live-menu-icon"
                         onClick={() => setOpen(!open)}
                     >
-                        {open ? <FiX size={26} /> : <FiMenu size={26} />}
+                        {open ? <FiX size={28} /> : <FiMenu size={28} />}
                     </div>
-                </div>
+                )}
             </header>
 
+            {/* Overlay */}
             {open && (
                 <div
-                    className="menu-overlay"
-                    onClick={closeMenu}
-                />
+                    className="live-overlay"
+                    onClick={handleClose}
+                ></div>
             )}
 
-            <div className={`mobile-menu ${open ? "open" : ""}`}>
-                <div className="mobile-close">
-                    <FiX size={24} onClick={closeMenu} />
+            {/* Sidebar / Dropdown */}
+            {device !== "desktop" && (
+                <div
+                    className={`live-menu ${open ? "open" : ""} ${device}`}
+                >
+                    <Link to="/" onClick={handleClose}>Home</Link>
+                    <Link to="/company" onClick={handleClose}>Company</Link>
+                    <Link to="#" onClick={handleClose}>Services</Link>
+                    <Link to="/diversity" onClick={handleClose}>
+                        Diversity & Inclusion
+                    </Link>
+                    <Link to="/domains" onClick={handleClose}>
+                        Domain Specialities
+                    </Link>
+                    <Link to="/contact" onClick={handleClose}>Contact</Link>
+
+                    <Link to="/jobs" onClick={handleClose}>
+                        <button className="live-find-btn mobile-btn">
+                            Find a Job
+                        </button>
+                    </Link>
                 </div>
-
-                <NavLink to="/" end onClick={closeMenu}>Home</NavLink>
-                <NavLink to="/company" onClick={closeMenu}>Company</NavLink>
-                <NavLink to="/services" onClick={closeMenu}>Services</NavLink>
-                <NavLink to="/diversity" onClick={closeMenu}>Diversity & Inclusion</NavLink>
-                <NavLink to="/domains" onClick={closeMenu}>Domain Specialities</NavLink>
-                <NavLink to="/contact" onClick={closeMenu}>Contact</NavLink>
-
-                <button className="mobile-btn">Find a Job</button>
-            </div>
+            )}
         </>
     );
 };

@@ -1,11 +1,9 @@
-/* RESET */
 * {
   margin: 0;
-  padding: 0;
+  padding: 0 ;
   box-sizing: border-box;
 }
 
-/* ROOT VARIABLES – LiveConnections Style */
 :root {
   --primary-blue: #0b5ed7;
   --dark-blue: #0a2540;
@@ -30,7 +28,7 @@ body {
   width: 100%;
   max-width: 1200px;
   margin: auto;
-  padding: 0 16px;
+  padding: 0 20px;
 }
 
 /* COMMON HEADINGS */
@@ -52,4 +50,12 @@ h1, h2, h3, h4 {
 
 .btn:hover {
   background-color: #084298;
+}
+body {
+  padding-top: 90px;
+}
+@media (max-width: 768px) {
+  body {
+    padding-top: 80px;
+  }
 }
