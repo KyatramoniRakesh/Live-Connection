@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../CSS/domain.css";
+import "../CSS/Domain.css";
 import useLiveFadeUp from "../js/useLiveFadeUp";
 import heroImage from "../images/diversity-hero.webp";
 import automative from "../images/automative.jpg";
