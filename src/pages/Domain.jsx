@@ -6,6 +6,10 @@ import automative from "../images/automative.jpg";
 import banking from "../images/banking.png"
 import informative from "../images/informative.webp"
 import shippingImage from "../images/ship.webp";
+import enabledit from "../images/Domain_IT.webp";
+import diversityImage from "../images/Mask-Group.webp";
+
+import DomainSpecialities from "../components/Domainspecialities";
 
 const DomainSpecialities = () => {
 
@@ -270,6 +274,123 @@ const DomainSpecialities = () => {
 
             </section>
 
+            {/* ================= TECHNOLOGY CONTENT SECTION ================= */}
+            <section className="live-domain-tech">
+
+                <div className="live-domain-tech-col live-domain-tech-left">
+                    <h3 className="live-domain-tech-highlight">
+                        We have been partnering with leading (traditional and new age) organizations in this industry since our inception.
+                    </h3>
+
+                    <button className="live-domain-purple-btn live-domain-tech-btn">
+                        Talk to our Expert
+                    </button>
+                </div>
+
+                <div className="live-domain-tech-col live-domain-tech-middle">
+                    <h4 className="live-domain-tech-title">
+                        First in the Industry Solutions
+                    </h4>
+
+                    <p className="live-domain-tech-text">
+                        Live Connections is uniquely placed to take advantage of the changing times in the industry since logistics is our flagship vertical. We have been partnering with leading (traditional and new age) organizations in this industry since our inception. These include leaders in Freight Forwarding, Shipping, Courier, Surface Transport, NVOCC and the Supply Chain domains.
+                    </p>
+                </div>
+
+                <div className="live-domain-tech-col live-domain-tech-right">
+                    <p className="live-domain-tech-text">
+                        We have carefully nurtured and built our expertise in helping our clients identify key talents across verticals like Air Product, Ocean Product, Full Container Load (FCL), Less Container Load (LCL), Bulk Cargo etc. We've helped our clients identify professionals at all levels for functions like Operations, Sales, Customer Service, Export & Import, Documentation, Profit Centre Heads at the regional and national levels, HR, Finance, MIS etc.
+                        With quite a few new age organizations bursting into the scene, we have broadened our capability to cover positions like Hub & Linehaul Operations, Fleet Specialists, Gateway Operations etc.
+                    </p>
+                </div>
+
+            </section>
+
+            {/* ================= BANKING SECTION ================= */}
+            <section className="live-domain-split" >
+
+                <div className="live-domain-split-image">
+                    <img
+                        src={enabledit}
+                        alt="Banking"
+                    />
+                </div>
+
+                <div className="live-domain-split-content" id="Domain_it"  >
+                    <div className="live-domain-split-inner" >
+                        <h2 className="live-domain-split-title">
+                            IT Enabled <br /> Services
+                        </h2>
+
+                        <div className="live-domain-split-underline"></div>
+                    </div>
+                </div>
+
+            </section>
+
+            {/* ================= CONTENT SECTION ================= */}
+            <section className="live-domain-content" style={{ backgroundColor: "#EDEDED" }}>
+
+                <div className="live-domain-content-left">
+                    <h3 className="live-domain-highlight">
+                        Resourcing for Diversity & Inclusion is one of the most discussed topics in organisations today. Are you looking for a D&I practice partner? We’re happy to help you.                    </h3>
+
+                    <button className="live-domain-purple-btn">
+                        Talk to our Expert
+                    </button>
+                </div>
+
+                <div className="live-domain-content-right">
+
+
+                    <p className="live-domain-content-text">
+                        LiveC works for global giants, Big 4s, top MNCs and offers unparalleled services for ITES wing with a diligent, dedicated and detailed approach.
+
+                        We place candidates in Consulting, Taxation, Audit & Advisory, Analytics, POSH, Procurement/SCM, Energy & Utilities, FMR, FPNA, Capital Markets, Process Excellence, Pre-Sales, Fund Accounting, Life Sciences, Retail and E-Commerce, Travel and Hospitality, Education and Power & Energy.                    </p>
+
+                    {expanded && (
+                        <p className="live-domain-content-text live-domain-extra">
+                            It also helps that we have a good mix of traditional and new age clients. We partner with leaders in the Auto OEM, Auto Ancillary, Light and Heavy Engineering, Pharma, EPC, Construction, Automation domains for whom we have helped identify talents across levels. This includes for functions like Production, Quality, Maintenance, Purchase, Procurement, Supply Chain EHS, R&D, Sales & Marketing, HR, Finance etc.
+                        </p>
+                    )}
+
+                    <span
+                        className="live-domain-read-toggle"
+                        onClick={() => setExpanded(!expanded)}
+                    >
+                        {expanded ? "Read less" : "Read more"}
+                    </span>
+
+                </div>
+
+            </section>
+
+            {/* ================= DIVERSITY PRACTICE SECTION ================= */}
+            <section className="live-domain-diversity live-fade-up live-delay-1">
+
+                <div className="live-domain-diversity-image live-fade-up live-delay-2">
+                    <img src={diversityImage} alt="Diversity Practice" />
+                </div>
+
+                <div className="live-domain-diversity-content">
+
+                    <h2 className="live-domain-diversity-title live-fade-up live-delay-3">
+                        Resourcing for Diversity & Inclusion is one of the most discussed topics in organisations today.
+                        Are you looking for a D&I practice partner? We’re happy to help you.
+                    </h2>
+
+                    <div className="live-domain-diversity-link-wrapper live-fade-up live-delay-4">
+                        <a href="#" className="live-domain-diversity-link">
+                            Learn about our D&I practice
+                        </a>
+                        <div className="live-domain-diversity-underline"></div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <DomainSpecialities/>
 
 
 

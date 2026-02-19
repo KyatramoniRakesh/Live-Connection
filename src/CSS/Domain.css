@@ -738,7 +738,7 @@
   }
 
   .live-domain-shipping-title {
-    font-size: 25px;
+    font-size: 26px;
   }
 
   .live-domain-shipping-underline {
@@ -747,3 +747,98 @@
   }
 }
 
+#Domain_it{
+    background-color: #055BFF;
+}
+
+/* ===================================== */
+/* DIVERSITY PRACTICE SECTION */
+/* ===================================== */
+
+.live-domain-diversity {
+  width: 100%;
+  display: flex;
+  padding: 120px 100px;
+  gap: 80px;
+  align-items: center;
+}
+
+/* LEFT IMAGE */
+.live-domain-diversity-image {
+  width: 50%;
+}
+
+.live-domain-diversity-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* RIGHT CONTENT */
+.live-domain-diversity-content {
+  width: 50%;
+}
+
+.live-domain-diversity-title {
+  font-size: 34px;
+  line-height: 1.4;
+  color: #1f2d3d;
+  font-weight: 500;
+}
+
+/* LINK */
+.live-domain-diversity-link-wrapper {
+  margin-top: 40px;
+  display: inline-block;
+}
+
+.live-domain-diversity-link {
+  text-decoration: none;
+  font-size: 18px;
+  color: #8a2be2;
+  font-weight: 500;
+}
+
+.live-domain-diversity-underline {
+  width: 120px;
+  height: 2px;
+  background: #8a2be2;
+  margin-top: 6px;
+}
+@media (max-width: 1024px) {
+
+  .live-domain-diversity {
+    padding: 80px 60px;
+    gap: 50px;
+  }
+
+  .live-domain-diversity-title {
+    font-size: 26px;
+  }
+}
+@media (max-width: 768px) {
+
+  .live-domain-diversity {
+    flex-direction: column;
+    padding: 60px 20px;
+    gap: 30px;
+  }
+
+  .live-domain-diversity-image,
+  .live-domain-diversity-content {
+    width: 100%;
+  }
+
+  .live-domain-diversity-title {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .live-domain-diversity-link {
+    font-size: 16px;
+  }
+
+  .live-domain-diversity-underline {
+    width: 90px;
+  }
+}
