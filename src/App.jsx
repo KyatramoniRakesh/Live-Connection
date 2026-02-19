@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
-import CompanyPage from "./pages/companyPage";
+import CompanyPage from "./pages/CompanyPage";
 import LiveDiversity from "./pages/LiveDiversity";
 import Domain from "./pages/Domain";
 import JobSearchPage from "./pages/JobSearchPage";
