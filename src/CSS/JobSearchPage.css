@@ -1,0 +1,206 @@
+/* =========================
+   SECTION
+========================= */
+
+.live-jobsearch-section {
+    width: 100%;
+    min-height: 100vh;
+    background: #e6e6e6;
+    padding: 120px 0 100px;
+}
+
+.live-jobsearch-container {
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.live-jobsearch-title {
+    font-size: 56px;
+    font-weight: 500;
+    color: #1e2a2a;
+    margin-bottom: 70px;
+}
+
+/* =========================
+   GRID LAYOUT
+========================= */
+
+.live-jobsearch-form-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    align-items: start;
+}
+
+/* =========================
+   FIELDS
+========================= */
+
+.live-jobsearch-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.live-jobsearch-field label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #1e2a2a;
+}
+
+.live-jobsearch-field select {
+    height: 55px;
+    border-radius: 8px;
+    border: 1px solid #0e2b3d;
+    padding: 0 15px;
+    font-size: 16px;
+    background: #f5f5f5;
+    cursor: pointer;
+}
+
+/* =========================
+   BUTTON COLUMN
+========================= */
+
+.live-jobsearch-button-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+/* This fixes alignment */
+.live-jobsearch-label-space {
+    height: 26px;
+    margin-bottom: 10px;
+}
+
+.live-jobsearch-btn {
+    height: 55px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    background: linear-gradient(90deg, #8f63d6, #4b55d6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+.live-jobsearch-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.live-jobsearch-clear {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #1e2a2a;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.live-jobsearch-clear:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1024px) {
+    .live-jobsearch-form-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .live-jobsearch-title {
+        font-size: 30px;
+        margin-bottom: 40px;
+    }
+
+    .live-jobsearch-form-wrapper {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .live-jobsearch-btn {
+        width: 100%;
+    }
+}
+
+
+/* =========================
+   RESUME CTA SECTION
+========================= */
+
+.live-resume-section {
+    width: 100%;
+    background: #8f95d1; 
+    padding: 120px 0;
+}
+
+.live-resume-container {
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.live-resume-heading {
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #1e2a2a;
+    max-width: 900px;
+    margin-bottom: 50px;
+}
+
+/* BUTTON */
+
+.live-resume-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 40px;
+    background: #ffffff;
+    color: #1e2a2a;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.live-resume-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    background-color: transparent;
+    border: 1px solid #ffffff;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1024px) {
+    .live-resume-heading {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .live-resume-section {
+        padding: 80px 0;
+    }
+
+    .live-resume-heading {
+        font-size: 26px;
+    }
+
+    .live-resume-btn {
+        width: 100%;
+        text-align: center;
+    }
+}

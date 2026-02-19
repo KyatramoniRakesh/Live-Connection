@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import CompanyPage from "./pages/companyPage";
 import LiveDiversity from "./pages/LiveDiversity";
 import Domain from "./pages/Domain";
+import JobSearchPage from "./pages/JobSearchPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/company" element={<CompanyPage />} />
         <Route path="/diversity" element={<LiveDiversity />} />
         <Route path="/domains" element={<Domain/>} />
+        <Route path="/jobs" element={<JobSearchPage />} />
       </Routes>
 
       <Footer />

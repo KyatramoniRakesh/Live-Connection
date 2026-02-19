@@ -228,3 +228,10 @@
     font-size: 15px;
   }
 }
+
+.navbar-actions a {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}

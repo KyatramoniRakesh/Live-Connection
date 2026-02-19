@@ -9,7 +9,7 @@ import shippingImage from "../images/ship.webp";
 import enabledit from "../images/Domain_IT.webp";
 import diversityImage from "../images/Mask-Group.webp";
 
-import DomainSpecialities from "../components/Domainspecialities";
+import DomainSpecialitiesImg from "../components/Domainspecialities";
 
 const DomainSpecialities = () => {
 
@@ -390,9 +390,26 @@ const DomainSpecialities = () => {
 
             </section>
 
-            <DomainSpecialities/>
+            <DomainSpecialitiesImg />
 
+            {/* INFO SECTION */}
+            <section className="live-domain-cta">
 
+                <div className="live-domain-cta-container">
+
+                    <p className="live-domain-cta-text">
+Whether you’re looking for a consulting solution or trying to manage your resourcing challenges, we have the expertise that you want.                    </p>
+
+                    <div className="live-domain-cta-link-wrapper">
+                        <a href="#" className="live-domain-cta-link">
+                            Explore Our Solutions
+                        </a>
+                        <div className="live-domain-cta-underline"></div>
+                    </div>
+
+                </div>
+
+            </section>
 
 
 

@@ -1,0 +1,137 @@
+.live-jobs-section {
+    padding: 100px 0;
+    background: #f4f4f4;
+}
+
+.live-jobs-container {
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.live-jobs-heading {
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.live-jobs-heading span {
+    color: #8f63d6;
+}
+
+.live-jobs-underline {
+    width: 70px;
+    height: 4px;
+    background: #1e2a2a;
+    margin-bottom: 60px;
+}
+
+/* GRID */
+
+.live-jobs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+/* CARD */
+
+.live-job-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    /* transition: 0.3s; */
+}
+
+/* .live-job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+} */
+
+.live-job-icon {
+    font-size: 22px;
+    color: #8f63d6;
+    margin-bottom: 20px;
+}
+
+.live-job-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.live-company {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.live-job-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.live-job-info svg {
+    color: #8f63d6;
+}
+
+/* ACTIONS */
+
+.live-job-actions {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.live-apply-btn {
+    padding: 8px 20px;
+    border: 1px solid #1e50ff;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #1e50ff;
+}
+
+.live-apply-btn :hover{
+    background-color: transparent;
+    border-color: #1e2a2a;
+}
+
+.live-details-link {
+    text-decoration: none;
+    color: #8f63d6;
+    font-size: 14px;
+}
+
+/* LOAD MORE */
+
+.live-loadmore-wrapper {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.live-loadmore-btn {
+    padding: 12px 40px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #8f63d6, #4b55d6);
+    color: white;
+    cursor: pointer;
+}
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+    .live-jobs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+    .live-jobs-grid {
+        grid-template-columns: 1fr;
+    }
+}

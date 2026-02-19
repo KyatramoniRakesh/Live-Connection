@@ -25,7 +25,7 @@ const Navbar = () => {
                         </div>
 
                         <nav className="navbar-links">
-                            
+
                             <NavLink to="/company">Company</NavLink>
                             <NavLink to="/services">Services</NavLink>
                             <NavLink to="/diversity">Diversity & Inclusion</NavLink>
@@ -35,9 +35,15 @@ const Navbar = () => {
                     </div>
 
                     <div className="navbar-actions">
-                        <button className="btn-outline">Talk to Us</button>
-                        <button className="btn-filled">Find a Job</button>
+                        <Link to="/contact" className="btn-outline">
+                            Talk to Us
+                        </Link>
+
+                        <Link to="/jobs" className="btn-filled">
+                            Find a Job
+                        </Link>
                     </div>
+
 
                     <div
                         className="mobile-menu-icon"

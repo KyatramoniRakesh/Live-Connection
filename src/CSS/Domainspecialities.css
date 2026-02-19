@@ -1,100 +1,91 @@
-/* ===================================== */
-/* OTHER DOMAINS SECTION */
-/* ===================================== */
-
 .live-other-domains {
-  padding: 120px 100px;
+  /* padding: 100px 100px; */
+  padding: 0;
+  margin: 0;
 }
 
-.live-other-domains-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 60px;
-}
-
-.live-other-domains-title {
-  font-size: 36px;
-  color: #1f2d3d;
-}
-
-.live-other-domains-toggle {
-  background: none;
-  border: none;
-  font-size: 18px;
-  color: #8a2be2;
-  cursor: pointer;
-}
-
-/* Grid */
+/* GRID */
 .live-other-domains-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+  /* grid-template-columns: repeat(2, 1fr); */
+  /* gap: 60px; */
+}
+.live-other-domains-header {
+    padding:0 40px;
+    display: flex;
+    justify-content: space-between;
 }
 
-/* Card */
-.live-other-domain-card {
-  position: relative;
+.live-other-domains-toggle{
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    color: #8a2be2;
+    cursor: pointer;
 }
 
-/* Image */
+/* IMAGE */
 .live-other-domain-image {
   position: relative;
-  overflow: hidden;
 }
 
 .live-other-domain-image img {
   width: 100%;
-  height: 400px;
+  height: 220px;
   object-fit: cover;
-  transition: transform 0.6s ease;
 }
 
-.live-other-domain-image:hover img {
-  transform: scale(1.05);
-}
-
-/* Overlay */
-.live-other-domain-overlay {
+/* INFO BLOCK */
+.live-other-domain-info {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.4),
-    rgba(0,0,0,0.6)
-  );
-  color: #fff;
-  padding: 40px;
+  bottom: 40px;
+  left: 60px;
+  right: 60px;
+}
+
+
+/* Title + Button on same row */
+.live-other-domain-top {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  
 }
 
-.live-other-domain-overlay h3 {
-  font-size: 28px;
+.live-other-domain-top h3 {
+  font-size: 32px;
+  color: #ffffff;
 }
 
-.live-other-domain-underline {
-  width: 80px;
-  height: 4px;
-  background: #fff;
-  margin: 15px 0;
-}
-
+/* Button right aligned */
 .live-other-domain-btn {
   background: #fff;
   border: none;
-  padding: 10px 20px;
-  cursor: pointer;
+  padding: 12px 30px;
+  font-size: 14px;
   color: #8a2be2;
-  border-radius: 4px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.live-other-domain-btn:hover {
+background-color: transparent;
+border: 1px solid #ffffff;
+color: #ffffff;
 }
 
-/* Expanded Content */
+/* Underline */
+.live-other-domain-underline {
+  width: 80px;
+  height: 4px;
+  background: #ffffff;
+  margin-top: 15px;
+}
+
+/* Expand content */
 .live-other-domain-content {
   background: #f8f8f8;
-  padding: 30px;
+  padding: 40px;
   animation: liveExpand 0.4s ease forwards;
 }
 
@@ -102,27 +93,10 @@
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
 }
-@media (max-width: 1024px) {
-
-  .live-other-domains {
-    padding: 80px 60px;
-  }
-
-  .live-other-domains-title {
-    font-size: 28px;
-  }
-}
-
 @media (max-width: 768px) {
 
   .live-other-domains {
     padding: 60px 20px;
-  }
-
-  .live-other-domains-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
   }
 
   .live-other-domains-grid {
@@ -131,5 +105,11 @@
 
   .live-other-domain-image img {
     height: 250px;
+  }
+
+  .live-other-domain-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
   }
 }
