@@ -5,6 +5,7 @@ import CompanyTimeline from "../components/CompanyTimeline";
 import CoreTeam from "../components/CoreTeam";
 import CompanyCulture from "../components/CompanyCulture";
 import HrResource from "../components/HrResource";
+import { Link } from "react-router-dom";
 
 const CompanyPage = () => {
 
@@ -121,18 +122,20 @@ const CompanyPage = () => {
                             in Corporate India.
                         </p>
 
-                        <button className="live-company-value-btn">
-                            Talk to Us
-                        </button>
+                        <Link to="/jobs" style={{ textDecoration: "none" }}>
+                            <button className="live-company-value-btn">
+                                Talk to Us
+                            </button>
+                        </Link>
 
                     </div>
 
                 </div>
             </section>
-            <CompanyTimeline/>
-            <CoreTeam/>
-            <CompanyCulture/>
-            <HrResource/>
+            <CompanyTimeline />
+            <CoreTeam />
+            <CompanyCulture />
+            <HrResource />
         </>
     );
 };

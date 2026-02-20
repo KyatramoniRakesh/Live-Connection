@@ -4,6 +4,7 @@ import "../CSS/CompanyCulture.css";
 import { alljobs } from "../js/Jobpost";
 import Jobposting from "./Jobposting";
 import diversity from '../images/diversity_cmp.png'
+import { Link } from "react-router-dom";
 
 function CompanyCulture() {
   return (
@@ -11,10 +12,10 @@ function CompanyCulture() {
 
       <div className="connect-culture-container">
 
-        
+
         <h2 className="connect-culture-title">Our Culture</h2>
 
-        
+
         <div className="connect-culture-banner">
           <img src={culture} alt="Culture" />
 
@@ -23,7 +24,7 @@ function CompanyCulture() {
           </div>
         </div>
 
-       
+
         <div className="connect-culture-description">
           <p>
             Our culture has always been defined by transparent, employee friendly
@@ -36,12 +37,12 @@ function CompanyCulture() {
           </p>
         </div>
 
-       
+
         <p className="connect-culture-contact">
           We're always happy to hear from anyone interested in working with or for us.
         </p>
 
-       
+
         <h2 className="connect-jobs-title">Jobs@LiveC</h2>
 
         <h4 className="connect-subtitle">Open Positions</h4>
@@ -68,9 +69,11 @@ function CompanyCulture() {
               to our client needs
             </p>
 
-            <button className="connect-di-btn">
-              Talk to Us
-            </button>
+            <Link to="/contact" style={{ textDecoration: "none" }}>
+              <button className="connect-di-btn">
+                Talk to Us
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -83,9 +86,11 @@ function CompanyCulture() {
               See how we can help you.
             </p>
 
-            <button className="connect-di-cta-btn">
-              Explore Domain Specialties
-            </button>
+            <Link to="/domains" style={{ textDecoration: "none" }}>
+              <button className="connect-di-cta-btn">
+                Explore Domain Specialties
+              </button>
+            </Link>
 
           </div>
         </div>

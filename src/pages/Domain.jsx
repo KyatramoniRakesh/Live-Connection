@@ -10,9 +10,14 @@ import enabledit from "../images/Domain_IT.webp";
 import diversityImage from "../images/Mask-Group.webp";
 
 import DomainSpecialitiesImg from "../components/Domainspecialities";
-
+import { useNavigate } from "react-router-dom";
 const DomainSpecialities = () => {
 
+    const navigate = useNavigate();
+
+    const goToContact = () => {
+        navigate("/contact");
+    };
     useLiveFadeUp();
     const [expanded, setExpanded] = useState(false);
 
@@ -37,7 +42,8 @@ const DomainSpecialities = () => {
                             market knowledge and functional expertise.
                         </p>
 
-                        <button className="live-domain-hero-btn live-fade-up live-delay-3">
+                        <button className="live-domain-hero-btn live-fade-up live-delay-3" onClick={goToContact}
+                            style={{ cursor: "pointer" }}>
                             Talk to our Experts
                         </button>
 
@@ -91,7 +97,8 @@ const DomainSpecialities = () => {
                         With over two decades of hiring talents in the automotive sector, we understand the marketplace like no other!
                     </h3>
 
-                    <button className="live-domain-purple-btn">
+                    <button className="live-domain-purple-btn" onClick={goToContact}
+                        style={{ cursor: "pointer" }}>
                         Talk to our Expert
                     </button>
                 </div>
@@ -152,7 +159,8 @@ const DomainSpecialities = () => {
                         With the constantly evolving digital landscape, financial institutions have endured a lot to meet the demands of its customers. Equally placing importance its to human resources. LiveC has placed some of the best known talents in the market today
                     </h3>
 
-                    <button className="live-domain-purple-btn">
+                    <button className="live-domain-purple-btn" onClick={goToContact}
+                        style={{ cursor: "pointer" }}>
                         Talk to our Expert
                     </button>
                 </div>
@@ -212,7 +220,8 @@ const DomainSpecialities = () => {
                         We work with Tech Services and Captive centres and have teams that specialise in lateral and leadership hiring where we work across domains and functions.
                     </h3>
 
-                    <button className="live-domain-purple-btn live-domain-tech-btn">
+                    <button className="live-domain-purple-btn live-domain-tech-btn" onClick={goToContact}
+                        style={{ cursor: "pointer" }}>
                         Talk to our Expert
                     </button>
                 </div>
@@ -245,7 +254,8 @@ const DomainSpecialities = () => {
                     </p>
 
                     <div className="live-domain-cta-link-wrapper">
-                        <a href="#" className="live-domain-cta-link">
+                        <a href="#" className="live-domain-cta-link" onClick={goToContact}
+                            style={{ cursor: "pointer" }}>
                             Talk to our Expert
                         </a>
                         <div className="live-domain-cta-underline"></div>
@@ -282,7 +292,8 @@ const DomainSpecialities = () => {
                         We have been partnering with leading (traditional and new age) organizations in this industry since our inception.
                     </h3>
 
-                    <button className="live-domain-purple-btn live-domain-tech-btn">
+                    <button className="live-domain-purple-btn live-domain-tech-btn" onClick={goToContact}
+                        style={{ cursor: "pointer" }}>
                         Talk to our Expert
                     </button>
                 </div>
@@ -335,7 +346,8 @@ const DomainSpecialities = () => {
                     <h3 className="live-domain-highlight">
                         Resourcing for Diversity & Inclusion is one of the most discussed topics in organisations today. Are you looking for a D&I practice partner? We’re happy to help you.                    </h3>
 
-                    <button className="live-domain-purple-btn">
+                    <button className="live-domain-purple-btn" onClick={goToContact}
+                        style={{ cursor: "pointer" }}>
                         Talk to our Expert
                     </button>
                 </div>
@@ -398,7 +410,7 @@ const DomainSpecialities = () => {
                 <div className="live-domain-cta-container">
 
                     <p className="live-domain-cta-text">
-Whether you’re looking for a consulting solution or trying to manage your resourcing challenges, we have the expertise that you want.                    </p>
+                        Whether you’re looking for a consulting solution or trying to manage your resourcing challenges, we have the expertise that you want.                    </p>
 
                     <div className="live-domain-cta-link-wrapper">
                         <a href="#" className="live-domain-cta-link">

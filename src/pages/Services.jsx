@@ -10,9 +10,19 @@ import '../CSS/Service.css'
 import '../CSS/Service2.css'
 import '../CSS/Service3.css'
 
+import { useNavigate } from 'react-router-dom'
+
 import HrResource from '../components/HrResource'
 
 function Services() {
+
+    const navigate = useNavigate();
+
+    const goToContact = () => {
+        navigate("/contact");
+    };
+
+
     return (
         <>
             <section className="serv-hero">
@@ -35,7 +45,8 @@ function Services() {
                     </p>
 
 
-                    <div className="serv-btn serv-fadeup serv-delay-2">
+                    <div className="serv-btn serv-fadeup serv-delay-2" onClick={goToContact}
+                        style={{ cursor: "pointer" }}>
                         Talk to our Expert
                     </div>
 
@@ -96,7 +107,8 @@ function Services() {
                     </p>
 
 
-                    <div className="serv-btn serv-fadeup serv-delay-5">
+                    <div className="serv-btn serv-fadeup serv-delay-5" onClick={goToContact}
+                        style={{ cursor: "pointer" }}>
                         Talk to our Expert
                     </div>
 
@@ -151,7 +163,8 @@ function Services() {
                     </p>
 
                     {/* DIV Button */}
-                    <div className="serv-btnn serv-fadeup">
+                    <div className="serv-btnn serv-fadeup" onClick={goToContact}
+                        style={{ cursor: "pointer" }}>
                         Talk to our Expert
                     </div>
 
@@ -197,7 +210,8 @@ function Services() {
                     </p>
 
 
-                    <div className="serv-btnn serv-fadeup">
+                    <div className="serv-btnn serv-fadeup" onClick={goToContact}
+                        style={{ cursor: "pointer" }}>
                         Talk to our Expert
                     </div>
 
@@ -242,7 +256,8 @@ function Services() {
                     </p>
 
 
-                    <div className="serv-btnn serv-fadeup">
+                    <div className="serv-btnn serv-fadeup" onClick={goToContact}
+                        style={{ cursor: "pointer" }}>
                         Talk to our Expert
                     </div>
 
@@ -263,7 +278,8 @@ function Services() {
                             India that could come to your aid.
                         </p>
 
-                        <div className="serv-incubating-link serv-fadeup">
+                        <div className="serv-incubating-link serv-fadeup" onClick={goToContact}
+                            style={{ cursor: "pointer" }}>
                             Contact Us
                         </div>
 
@@ -313,7 +329,9 @@ function Services() {
                             There is growing adoption of the model by smaller firms too.
                         </p>
 
-                        <div className="serv-btn">Talk to our Expert</div>
+                        <div className="serv-btn" onClick={goToContact}
+                            style={{ cursor: "pointer" }}
+                        >Talk to our Expert</div>
                     </div>
 
 
@@ -422,7 +440,8 @@ function Services() {
                 </div>
 
 
-                <div className="serv-rpo-btn serv-btn serv-fadeup">
+                <div className="serv-rpo-btn serv-btn serv-fadeup" onClick={goToContact}
+                    style={{ cursor: "pointer" }}>
                     Talk to our Expert
                 </div>
 

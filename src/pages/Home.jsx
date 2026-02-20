@@ -4,8 +4,17 @@ import JobSearch from "../components/JobSearch";
 import TeamLive from "../components/TeamLive";
 import Jobposting from "../components/Jobposting";
 import { recentjobs } from "../js/Jobpost.js";
+import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const goToContact = () => {
+    navigate("/contact");
+  };
+  const goToServices =() =>{
+    navigate('/services')
+  }
   return (
     <>
       <section
@@ -28,11 +37,13 @@ const Home = () => {
             </p>
 
             <div className="LIVE-hero-buttons">
-              <button className="LIVE-btn-primary">
+              <button className="LIVE-btn-primary" onClick={goToContact}
+                style={{ cursor: "pointer" }}>
                 Know More About Us
               </button>
 
-              <button className="LIVE-btn-secondary">
+              <button className="LIVE-btn-secondary" onClick={goToServices}
+                style={{ cursor: "pointer" }}>
                 Explore Our Services
               </button>
             </div>

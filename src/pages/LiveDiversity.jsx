@@ -3,10 +3,15 @@ import "../CSS/LiveDiversity.css";
 import diversityHero from "../images/diversity.webp";
 import useLiveFadeUp from "../js/useLiveFadeUp";
 import diversityCtaImg from "../images/diversity-cta.webp";
-
+import { useNavigate } from "react-router-dom";
 
 const LiveDiversity = () => {
     useLiveFadeUp();
+    const navigate = useNavigate();
+
+    const goToContact = () => {
+        navigate("/contact");
+    };
 
     return (
         <div className="live-diversity-page">
@@ -31,10 +36,13 @@ const LiveDiversity = () => {
                             inclusive hiring process and more.
                         </p>
 
-                        <button className="live-diversity-hero-btn live-fade-up live-delay-3">
+                        <button
+                            className="live-diversity-hero-btn live-fade-up live-delay-3"
+                            onClick={goToContact}
+                            style={{ cursor: "pointer" }}
+                        >
                             Talk to our Experts
                         </button>
-
                     </div>
                 </div>
             </section>
@@ -129,7 +137,9 @@ const LiveDiversity = () => {
                 </div>
 
                 <div className="live-diversity-stats-btn-wrapper live-fade-up live-delay-2">
-                    <button className="live-diversity-hero-btn">
+                    <button className="live-diversity-hero-btn"
+                        onClick={goToContact}
+                        style={{ cursor: "pointer" }}>
                         Talk to our Experts
                     </button>
                 </div>
@@ -150,7 +160,9 @@ const LiveDiversity = () => {
                             Would you like to connect with one of our executives near you?
                         </h2>
 
-                        <button className="live-diversity-split-btn live-fade-up live-delay-2">
+                        <button className="live-diversity-split-btn live-fade-up live-delay-2"
+                        onClick={goToContact}
+                            style={{ cursor: "pointer" }}>
                             Request A Call Back
                         </button>
 
@@ -195,7 +207,9 @@ const LiveDiversity = () => {
                         </p>
 
                         <div className="live-diversity-initiatives-btn live-fade-up live-delay-3">
-                            <button className="live-diversity-hero-btn">
+                            <button className="live-diversity-hero-btn"
+                            onClick={goToContact}
+                            style={{ cursor: "pointer" }}>
                                 Talk to our Expert
                             </button>
                         </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import Teambanner from '../images/teamcc.webp'
 import '../CSS/TeamLive.css'
+import { Link } from "react-router-dom";
 
 function TeamLive() {
     return (
@@ -23,7 +24,11 @@ function TeamLive() {
                         value.
                     </p>
 
-                    <button className="cta-btn">Know More</button>
+                    <Link to="/company" style={{ textDecoration: "none" }}>
+                        <button className="cta-btn">
+                            Know More
+                        </button>
+                    </Link>
                 </div>
             </section>
 
@@ -43,6 +48,7 @@ function TeamLive() {
                     <h2 className="recent-title">Recently Added Job Postings</h2>
                 </div>
             </section>
+            
 
         </>
     )

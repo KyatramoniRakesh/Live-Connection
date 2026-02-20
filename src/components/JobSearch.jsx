@@ -3,6 +3,7 @@ import "../CSS/JobSearch.css";
 import womanImg from "../images/livec_2.webp";
 import { FiUser, FiMessageCircle, FiTarget } from "react-icons/fi";
 import Footprint from "../components/Footprint";
+import { Link } from "react-router-dom";
 
 const JobSearch = () => {
     const [formData, setFormData] = useState({
@@ -132,9 +133,14 @@ const JobSearch = () => {
                                 We extend our Services to multiple sectors and functions across various geographies.
                             </p>
 
-                            <button className="live-celebration-btn">
-                                Know More
-                            </button>
+                            <Link
+                                to="/company"
+                                style={{ textDecoration: "none" }}
+                            >
+                                <button className="live-celebration-btn">
+                                    Know More
+                                </button>
+                            </Link>
                         </div>
                     </div>
 
@@ -272,9 +278,13 @@ const JobSearch = () => {
 
                     <div className="live-focus-grid">
                         {domains.map((item, index) => (
-                            <div key={index} className="live-focus-item">
+                            <Link
+                                to="/domains"
+                                key={index}
+                                className="live-focus-item"
+                            >
                                 {item}
-                            </div>
+                            </Link>
                         ))}
                     </div>
 
