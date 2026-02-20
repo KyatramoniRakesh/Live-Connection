@@ -6,6 +6,7 @@ import {
     FaLinkedinIn,
     FaYoutube,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import "../CSS/Footer.css";
 
 const Footer = () => {
@@ -65,22 +66,22 @@ const Footer = () => {
 
                     {/* LEFT LINKS */}
                     <div className="live-footer-links">
-                        <a href="#">Company</a>
-                        <a href="#">Services</a>
-                        <a href="#">Diversity & Inclusion</a>
-                        <a href="#">Domain Specialities</a>
-                        <a href="#">Contact</a>
+                        <Link to="/company">Company</Link>
+                        <Link to="/services">Services</Link>
+                        <Link to="/diversity">Diversity & Inclusion</Link>
+                        <Link to="/domains">Domain Specialities</Link>
+                        <Link to="/contact">Contact</Link>
                     </div>
 
                     {/* RIGHT SIDE */}
                     <div className="live-footer-right-area">
 
                         <div className="live-footer-social">
-                            <FaFacebookF />
-                            <FaInstagram />
-                            <FaTwitter />
-                            <FaLinkedinIn />
-                            <FaYoutube />
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
+                            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
                         </div>
 
                         <p className="live-footer-copy">
@@ -90,8 +91,6 @@ const Footer = () => {
                     </div>
 
                 </div>
-
-
             </div>
         </footer>
     );

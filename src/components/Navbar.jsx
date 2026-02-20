@@ -77,7 +77,7 @@ const Navbar = () => {
                 ></div>
             )}
 
-            {/* Sidebar / Dropdown */}
+           
             {device !== "desktop" && (
                 <div
                     className={`live-menu ${open ? "open" : ""} ${device}`}
