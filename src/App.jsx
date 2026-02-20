@@ -6,8 +6,7 @@ import Home from "./pages/Home";
 import CompanyPage from "./pages/CompanyPage";
 import LiveDiversity from "./pages/LiveDiversity";
 import Domain from "./pages/Domain";
-import JobSearchPage from "./pages/JobSearchPage";
-
+import FindJobPage from "./pages/FindJobPage";
 import Article from "./components/Article";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
@@ -22,7 +21,7 @@ function App() {
         <Route path="/company" element={<CompanyPage />} />
         <Route path="/diversity" element={<LiveDiversity />} />
         <Route path="/domains" element={<Domain/>} />
-        <Route path="/jobs" element={<JobSearchPage />} />
+        <Route path="/jobs" element={<FindJobPage />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact/>} />
 

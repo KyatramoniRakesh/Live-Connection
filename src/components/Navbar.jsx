@@ -49,7 +49,9 @@ const Navbar = () => {
                         </nav>
 
                         <div className="live-navbar-right">
-                            <button className="live-talk-btn">Talk to Us</button>
+                            <Link to="/contact">
+                                <button className="live-talk-btn">Talk to Us</button>
+                            </Link>
                             <Link to="/jobs">
                                 <button className="live-find-btn">Find a Job</button>
                             </Link>
