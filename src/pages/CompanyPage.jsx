@@ -3,6 +3,8 @@ import "../CSS/CompanyPage.css";
 import heroBanner from "../images/companyBanner.png";
 import CompanyTimeline from "../components/CompanyTimeline";
 import CoreTeam from "../components/CoreTeam";
+import CompanyCulture from "../components/CompanyCulture";
+import HrResource from "../components/HrResource";
 
 const CompanyPage = () => {
 
@@ -127,9 +129,10 @@ const CompanyPage = () => {
 
                 </div>
             </section>
-            
             <CompanyTimeline/>
             <CoreTeam/>
+            <CompanyCulture/>
+            <HrResource/>
         </>
     );
 };
