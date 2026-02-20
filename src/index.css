@@ -12,7 +12,8 @@
   --bg-white: #ffffff;
   --bg-light: #f9fafb;
 
-  --font-main: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-main: "Manrope", sans-serif;
+  font-family: "Manrope", sans-serif;
 }
 
 /* GLOBAL */
