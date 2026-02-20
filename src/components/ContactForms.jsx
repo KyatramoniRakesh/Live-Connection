@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../CSS/ContactForms.css";
 import { FiChevronDown } from "react-icons/fi";
-import HrResource from "../Components/HrResource";
+import HrResource from "../components/HrResource";
 
 function ContactForms() {
   const [activeForm, setActiveForm] = useState("business");
