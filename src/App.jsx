@@ -10,6 +10,7 @@ import JobSearchPage from "./pages/JobSearchPage";
 
 import Article from "./components/Article";
 import Services from "./pages/Services";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -23,9 +24,9 @@ function App() {
         <Route path="/domains" element={<Domain/>} />
         <Route path="/jobs" element={<JobSearchPage />} />
         <Route path="/services" element={<Services />} />
-        
+        <Route path="/contact" element={<Contact/>} />
 
-        {/* <Route path="/contact" element={<Contact/>} />
+        {/* 
         <Route path='/findjobs' element={<FindJobPage/>}/>
        
         <Route path='/jobs/:jobslug' element={<Jobs/>}/> */}
