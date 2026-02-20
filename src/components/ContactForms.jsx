@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../CSS/ContactForms.css";
 import { FiChevronDown } from "react-icons/fi";
+// import HrResource from "./HrResource";
 import HrResource from "./HrResource";
 
 function ContactForms() {
