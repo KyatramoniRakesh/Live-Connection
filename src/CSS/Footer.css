@@ -209,3 +209,11 @@
     font-size: 22px;
   }
 }
+.live-footer-link {
+  text-decoration: none;
+  color: inherit;
+}
+.live-footer a {
+   text-decoration: none;
+   color: inherit;
+}
