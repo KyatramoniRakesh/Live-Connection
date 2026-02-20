@@ -1,6 +1,5 @@
 import "../CSS/Home.css";
 import desktopBanner from "../images/livec_1.webp";
-import mobileBanner from "../images/HB_mobile.webp";
 import JobSearch from "../components/JobSearch";
 import TeamLive from "../components/TeamLive";
 import Jobposting from "../components/Jobposting";

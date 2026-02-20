@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { alljobs, recentjobs } from "../Data/Jobpost";
+import { alljobs, recentjobs } from "../js/Jobpost";
 
 import {
     FiMapPin,
@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 
 import "../CSS/Jobs.css";
-import HrResource from "../Components/HrResource";
+import HrResource from "../components/HrResource";
 
 function Jobs() {
 

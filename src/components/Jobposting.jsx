@@ -9,13 +9,12 @@ function Jobposting({ jobs }) {
   const navigate = useNavigate();
 
 
-  //mapping the id of recent in alljobs getting the complete details
   const recentfullJobs = jobs.map(r =>
     alljobs.find(job => job.slug === r.slug)
   );
 
   const handleApply = () => {
-    navigate("/contact-enquiry");
+    navigate("/contact");
   };
 
   return (
