@@ -42,7 +42,7 @@ const Navbar = () => {
                     <>
                         <nav className="live-navbar-center">
                             <Link to="/company">Company</Link>
-                            <Link to="#">Services</Link>
+                            <Link to="services">Services</Link>
                             <Link to="/diversity">Diversity & Inclusion</Link>
                             <Link to="/domains">Domain Specialities</Link>
                             <Link to="/contact">Contact</Link>
@@ -82,7 +82,7 @@ const Navbar = () => {
                 >
                     <Link to="/" onClick={handleClose}>Home</Link>
                     <Link to="/company" onClick={handleClose}>Company</Link>
-                    <Link to="#" onClick={handleClose}>Services</Link>
+                    <Link to="services" onClick={handleClose}>Services</Link>
                     <Link to="/diversity" onClick={handleClose}>
                         Diversity & Inclusion
                     </Link>
